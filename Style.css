@@ -1,0 +1,190 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f5f5f5; 
+}
+
+.logo {
+    color: #333; 
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    background-color: #3b5998; 
+    padding: 1rem 2rem; 
+}
+
+i {
+    transition: transform 0.5s ease;
+}
+
+ul,
+li,
+a {
+    text-decoration: none;
+    list-style-type: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.navbar-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.menu,
+.contactus,
+.about-us {
+    position: relative;
+}
+
+.menu:hover .html-chevron {
+    transform: rotate(-180deg);
+}
+
+.menu-sub-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 3.45rem;
+    left: 0;
+    background-color: #fffefe; 
+    width: 150%; 
+}
+
+.menu-sub-menu li {
+    padding: 0.75rem;
+    color: #000000;
+}
+
+.menu:hover .menu-sub-menu {
+    display: flex;
+    background-color:#3b5998;
+}
+
+.design {
+    margin: 20px auto; 
+    background-color: #fff; 
+    padding: 40px;
+    border-radius: 10px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+}
+
+.images {
+    padding: 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.product-info {
+    background-color: #ffffff;
+    padding: 15px; 
+    border-radius: 10px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.images img {
+    width: 250px; 
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.images img:hover {
+    transform: scale(1.1); 
+}
+
+@media (max-width: 768px) {
+    .navbar-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+.navbar-search input {
+    padding: 8px; 
+    font-size: 1rem; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    width: 250px; 
+    transition: width 0.3s;
+}
+
+.navbar-search input:focus {
+    width: 200px; 
+    outline: none; 
+    border-color: #3b5998; 
+}
+
+
+Script.js
+function orders() {
+    let val = prompt("To place the order, enter your name:");
+    if (val) {
+        alert("Your order is placed, " + val + "!");
+    } else {
+        alert("Please enter your name.");
+    }
+}
+
+
+
+Navigation menu 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <title>Women's Shopping</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="head">
+        <nav class="nav">
+            <div class="logo">WOMEN'S FASHION</div>
+            <ul class="navbar-links">
+                <li class="home"><a href="#">Home</a></li>
+                <li class="menu">
+                    <a href="#" class="html-link">CATEGORIES
+                        <i class="fa-solid fa-chevron-down html-chevron"></i>
+                    </a>
+                    <ul class="menu-sub-menu">
+                        <li><a href="#">DRESSES</a></li>
+                        <li><a href="#">TOPS</a></li>
+                        <li><a href="#">BOTTOMS</a></li>
+                        <li><a href="#">ACCESSORIES</a></li>
+                    </ul>
+                </li>
+                <li class="contactus">
+                    <a href="#" class="js-link">CONTACT US</a>
+                </li>
+                <li class="about-us">
+                    <a href="#">ABOUT US</a>
+                </li>
+            </ul>
+            <div class="navbar-search">
+                <a href="#"><input type="text" placeholder="Search" name="name" style="background-color: #ffffff;">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+                <a href="#">
+                    <i class="shopping"></i>
+                </a>
+                <a href="#">
+                    <i class="fa-solid fa-user"></i>
